@@ -6,8 +6,16 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("Hello World!");
+            
         }
     }
+
+    class MathOperations 
+    {
+        public static double MulyiplyByTwo(double value)
+        {
+            return value * 2;
+        }
+    }
+
 }

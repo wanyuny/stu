@@ -146,7 +146,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
+            RECT rect;
             // TODO: 在此处添加使用 hdc 的任何绘图代码...
+            GetClientRect(hWnd, &rect);
+            DrawText(hdc,TEXT("Hello,Windows"),-1,&rect,DT_SINGLELINE|DT_CENTER|DT_VCENTER);
             EndPaint(hWnd, &ps);
         }
         break;
